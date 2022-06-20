@@ -463,15 +463,14 @@ export default function Home() {
             </li>
             <li className={styles.listitem}>
               Commons, W. File:Scriabin keyboard.svg — Wikimedia Commons, the
-              free media repository2022.
+              free media repository2022.{" "}
               <a
                 href="https://commons.wikimedia.org/w/index.php?curid=4021885"
                 target="_blank"
                 rel="noreferrer"
               >
-                https://commons.wikimedia.org/w/index.php?curid=4021885
+                Link
               </a>
-              .
             </li>
             <li className={styles.listitem}>
               Stanley, K. O. Compositional pattern producing networks: A novel
@@ -479,7 +478,7 @@ export default function Home() {
               Machines (2007).
             </li>
             <li className={styles.listitem}>
-              Johnson, J. neural-style
+              Johnson, J. neural-style {" "}
               <a
                 href="https://github.com/jcjohnson/neural-style"
                 target="_blank"
@@ -491,7 +490,7 @@ export default function Home() {
             </li>
             <li className={styles.listitem}>
               Gatys, L. A., Ecker, A. S. & Bethge, M. A Neural Algorithm of
-              Artistic Style. CoRR abs/1508.06576. arXiv: 1508.06576.
+              Artistic Style. CoRR abs/1508.06576. arXiv: 1508.06576. {" "}
               <a
                 href="http://arxiv.org/abs/1508.06576"
                 target="_blank"
