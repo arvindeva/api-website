@@ -23,7 +23,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>Music Analyzer</h1>
-        <h3 className={styles.authorby}>Spring 2021 API Final Project by:</h3>
+        <h3 className={styles.authorby}>Spring 2022 API Final Project by:</h3>
         <h3 className={styles.authornames}>
           Gerlise Chan, Kenneth Fargose, Srishankar Sundar, Arvindeva Wibisono
         </h3>
