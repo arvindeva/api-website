@@ -17,7 +17,10 @@ export default function Home() {
     <div className={styles.container}>
       <Head>
         <title>API Final Project</title>
-        <meta name="description" content="Final Project for Audio Indexing Processing" />
+        <meta
+          name="description"
+          content="Final Project for Audio Indexing Processing"
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -89,9 +92,8 @@ export default function Home() {
             had already done all the heavylifting for us. On the other hand, the
             key detection part is a more complicated. The most implemented key
             detection method is the Krumhansl-Schmuckler key-finding algorithm
-            as shown in cite(krumhansl), so that&apos;s the one we decided to
-            implement. To implement this, we took an excerpt of code from
-            github:{" "}
+            as shown in [2], so that&apos;s the one we decided to implement. To
+            implement this, we took an excerpt of code from github:{" "}
             <a href="https://github.com/jackmcarthur/musical-key-finder">
               https://github.com/jackmcarthur/musical-key-finder
             </a>
@@ -177,9 +179,7 @@ export default function Home() {
           <h4>Polyphonic</h4>
           <div className={styles.audiopreview}>
             <div>
-              <p className={styles.paragraph}>
-                Original (Piano + vocal):
-              </p>
+              <p className={styles.paragraph}>Original (Piano + vocal):</p>
               <audio controls src="audio/pianovocal original.mp3">
                 Your browser does not support the
                 <code>audio</code> element.
@@ -224,7 +224,7 @@ export default function Home() {
           <div className={styles.imagewrapper}>
             <Image
               src={scriabin}
-              alt="Picture of the author"
+              alt="Scriabin keys"
               width={300}
               height={300}
             />
@@ -253,20 +253,20 @@ export default function Home() {
             <div className={styles.imagewrapper}>
               <Image
                 src={fourNotes}
-                alt="Picture of the author"
+                alt="Color Map of 4 notes"
                 width={300}
                 height={300}
               />
-              <p className={styles.caption}>Figure: Scriabin keys</p>
+              <p className={styles.caption}>Figure: Color Map of 4 notes</p>
             </div>{" "}
             <div className={styles.imagewrapper}>
               <Image
                 src={fourMinuteSong}
-                alt="Picture of the author"
+                alt="Color Map of a 4 Minute Song"
                 width={300}
                 height={300}
               />
-              <p className={styles.caption}>Figure: Scriabin keys</p>
+              <p className={styles.caption}>Figure: Color Map of a 4 Minute Song</p>
             </div>
           </div>
           <h2>Pattern Map</h2>
@@ -279,12 +279,11 @@ export default function Home() {
           <p className={styles.paragraph}>
             In order to generate the pattern map, we use the Compositional
             Pattern-Producing Network (CPPN) architecture implemented using
-            PyTorch. Stanley et al. outline the idea behind CPPNs in \citecppn .
-            The elemental difference in using the CPPN is that it does not
-            output the entire image (like a Generative Adversarial Network
-            would) but outputs individual pixels that are re-constituted. This
-            aspect of its working allows us to control the patterns being
-            generated.
+            PyTorch. Stanley et al. outline the idea behind CPPNs in [5] . The
+            elemental difference in using the CPPN is that it does not output
+            the entire image (like a Generative Adversarial Network would) but
+            outputs individual pixels that are re-constituted. This aspect of
+            its working allows us to control the patterns being generated.
           </p>
           <p className={styles.paragraph}>
             We alter the architecture of the network on-the-fly based on the
@@ -301,30 +300,32 @@ export default function Home() {
             <div className={styles.imagewrapper}>
               <Image
                 src={patternMap120bpm}
-                alt="Picture of the author"
+                alt="Pattern Map of a 120 BPM Song"
                 width={300}
                 height={300}
               />
-              <p className={styles.caption}>Figure: Scriabin keys</p>
+              <p className={styles.caption}>Figure: Pattern Map of a 120 BPM Song</p>
             </div>{" "}
             <div className={styles.imagewrapper}>
               <Image
                 src={patternMap160bpm}
-                alt="Picture of the author"
+                alt="Pattern Map of a 160 BPM Song"
                 width={300}
                 height={300}
               />
-              <p className={styles.caption}>Figure: Scriabin keys</p>
+              <p className={styles.caption}>Figure: Pattern Map of a 160 BPM Song</p>
             </div>
           </div>
           <h2>Blending</h2>
           <p className={styles.paragraph}>
             The blending of the color and pattern maps are done using
-            neural-style \cite(Johnson2015), which is a torch implementation
-            using a Convolutional Neural Network of the concepts presented by
-            Gatys et al. \cite(DBLP:journals/corr/GatysEB15a). Neural-style is
-            run through a containerized implementation found in the repository
-            linked at \url(https://github.com/ffedoroff/neural-style)
+            neural-style [6], which is a torch implementation using a
+            Convolutional Neural Network of the concepts presented by Gatys et
+            al. [7]. Neural-style is run through a containerized implementation
+            found in the repository linked at{" "}
+            <a href="https://github.com/ffedoroff/neural-style">
+              https://github.com/ffedoroff/neural-style
+            </a>
           </p>
           <p className={styles.paragraph}>
             Neural-style works by learning representations of two heterogeneous
@@ -345,8 +346,8 @@ export default function Home() {
             final blended images are shown and discussed in the results section.
           </p>
           <div className={styles.imagewrapper}>
-            <Image src={modifiedColorMap} alt="Picture of the author" />
-            <p className={styles.caption}>Figure: Scriabin keys</p>
+            <Image src={modifiedColorMap} alt="Modified Color Map" />
+            <p className={styles.caption}>Figure: Modified Color Map</p>
           </div>
           <h2>Visualization Results</h2>
           <p className={styles.paragraph}>
@@ -356,20 +357,20 @@ export default function Home() {
             <div className={styles.imagewrapper}>
               <Image
                 src={vizResult4Notes}
-                alt="Picture of the author"
+                alt="Visualization Result 4 Notes"
                 width={300}
                 height={300}
               />
-              <p className={styles.caption}>Figure: Scriabin keys</p>
+              <p className={styles.caption}>Figure: Visualization Result for a piece with only 4 Notes</p>
             </div>{" "}
             <div className={styles.imagewrapper}>
               <Image
                 src={vizResultDMinor}
-                alt="Picture of the author"
+                alt="Visualization Result of a piece in D minor"
                 width={300}
                 height={300}
               />
-              <p className={styles.caption}>Figure: Scriabin keys</p>
+              <p className={styles.caption}>Figure:Visualization Result of a piece in D minor</p>
             </div>
           </div>
           <p className={styles.paragraph}>
@@ -478,7 +479,7 @@ export default function Home() {
               Machines (2007).
             </li>
             <li className={styles.listitem}>
-              Johnson, J. neural-style {" "}
+              Johnson, J. neural-style{" "}
               <a
                 href="https://github.com/jcjohnson/neural-style"
                 target="_blank"
@@ -490,7 +491,7 @@ export default function Home() {
             </li>
             <li className={styles.listitem}>
               Gatys, L. A., Ecker, A. S. & Bethge, M. A Neural Algorithm of
-              Artistic Style. CoRR abs/1508.06576. arXiv: 1508.06576. {" "}
+              Artistic Style. CoRR abs/1508.06576. arXiv: 1508.06576.{" "}
               <a
                 href="http://arxiv.org/abs/1508.06576"
                 target="_blank"
